@@ -46,3 +46,12 @@ Das Ende des Liedes fällt mit dem Ende des Spots zusammen.
 Technische Bearbeitung des Originals: Die Quelle ist eine Bildschirmaufnahme. Bei 0:19 bis 0:21 war 1,8 s lang die YouTube-Bedienleiste eingeblendet.
 Diese Stelle wurde durch eine Zeitlupe der unmittelbar vorangehenden Sekunden derselben Einstellung ersetzt, gleich lang, der Ton bleibt unverändert.
 Ein Seitenrand von je 26 px gleicht das Seitenverhältnis 1,73 : 1 aus.
+
+## Version 3 (26.11.2026): neues Logo, Foto und neues Finale
+- **Neues Bildzeichen** (`07_logo-v3/`): Gitterstäbe, die sich öffnen, mit einem Menschen in der Öffnung. Es steht für die Befreiung politisch Verfolgter, für Freiheit, Würde und Hoffnung.
+- **Finale ab 1:52**, synchron zum Lied:
+  - Foto von Dr. Wolf-Dieter Schöne in Schwarz-Weiß mit dem Kampagnenleitsatz „Eine bessere Welt beginnt dort, wo wir aufhören, wegzusehen.“ (als Leitsatz gekennzeichnet, kein Zitat)
+  - Logoenthüllung zu „What a wonderful world“
+  - Claim und Spendenaufruf zum „Oh yeah“
+- Hongkong-Bild und Tonspur sind bitgenau unverändert gegenüber Version 2. Die Gesamtdauer beträgt weiterhin 136,1 s.
+- Das Foto und das fertige Video liegen **nicht** im Repository, weil es öffentlich ist.
