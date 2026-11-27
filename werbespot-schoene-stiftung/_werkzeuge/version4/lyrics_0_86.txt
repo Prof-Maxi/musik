@@ -1,0 +1,14 @@
+[   5.94-  21.44]  I see trees of green, red roses too, I see them bloom for me and you, and I think to
+    I@5.94 see@7.06 trees@7.52 of@8.16 green,@8.72 red@9.82 roses@11.82 too,@12.54 I@13.94 see@14.86 them@15.20 bloom@15.48 for@16.18 me@18.30 and@18.66 you,@18.86 and@20.18 I@20.56 think@20.80 to@21.18
+[  21.44-  41.84]  myself, what a wonderful world. I see skies of blue, and clouds of white, the bright
+    myself,@21.44 what@24.98 a@25.68 wonderful@25.90 world.@26.62 I@32.58 see@33.50 skies@33.92 of@34.46 blue,@35.32 and@37.46 clouds@37.96 of@38.74 white,@39.38 the@41.20 bright@41.32
+[  41.84-  61.00]  blessed day, the dark sacred night, and I think to myself, what a wonderful world. The colors
+    blessed@41.84 day,@42.38 the@43.76 dark@44.42 sacred@44.86 night,@45.26 and@46.56 I@47.60 think@47.80 to@48.04 myself,@48.30 what@51.86 a@52.46 wonderful@52.64 world.@53.28 The@59.32 colors@60.52
+[  61.00-  74.42]  of the rainbow, so pretty in the sky, are also on the faces of people going by. I see friends
+    of@61.00 the@61.34 rainbow,@61.60 so@62.66 pretty@63.88 in@64.38 the@65.04 sky,@65.24 are@66.84 also@67.22 on@67.88 the@68.20 faces@68.32 of@69.00 people@70.48 going@70.98 by.@71.46 I@73.04 see@73.42 friends@73.80
+[  74.42-  95.66]  shaking hands, saying how do you do? They're really saying I love you, I hear papers cry, I watch them grow, they might much
+    shaking@74.42 hands,@75.34 saying@76.48 how@77.50 do@78.10 you@78.50 do?@78.78 They're@81.08 really@81.78 saying@82.22 I@82.88 love@84.34 you,@85.06 I@86.64 hear@87.10 papers@87.52 cry,@88.08 I@90.34 watch@91.18 them@91.74 grow,@92.12 they@94.02 might@94.76 much@95.08
+[  95.66- 122.48]  more than I ever knew, and I think to myself, what a wonderful world. Yes, I think to myself, what a wonderful world.
+    more@95.66 than@96.52 I@97.84 ever@98.18 knew,@98.78 and@100.38 I@100.78 think@101.04 to@101.34 myself,@101.66 what@104.90 a@105.68 wonderful@105.90 world.@106.60 Yes,@111.04 I@113.68 think@114.08 to@114.48 myself,@114.90 what@118.76 a@119.58 wonderful@119.82 world.@120.64
+[ 128.86- 131.34]  Oh, yes.
+    Oh,@128.86 yes.@130.32

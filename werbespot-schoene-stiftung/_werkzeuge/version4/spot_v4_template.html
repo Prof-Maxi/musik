@@ -1,0 +1,225 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@font-face{font-family:SSL;src:url(__F__SourceSerif4-latin-300-normal.ttf)}
+@font-face{font-family:SSI;src:url(__F__SourceSerif4-latin-400-italic.ttf)}
+html,body{margin:0;background:#000}
+svg{display:block}
+.sl{font-family:SSL;fill:#F4F2EE}
+.si{font-family:SSI;fill:#F4F2EE}
+.in{font-family:Inter;fill:#F4F2EE}
+</style></head><body>
+<svg id="stage" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#000"/>
+<!-- Szene 1: Titel -->
+<g id="sc1">
+ <text id="t1" class="sl" x="960" y="520" text-anchor="middle" font-size="86">Eine wunderbare Welt.</text>
+ <text id="t2" class="si" x="960" y="630" text-anchor="middle" font-size="86">Aber nicht für alle.</text>
+</g>
+<!-- Szene 2: Punkte -->
+<g id="sc2"><g id="grid"></g>
+ <text id="s2a" class="sl" x="240" y="905" font-size="54">Für viele ein <tspan class="si">unerfüllter Traum.</tspan></text>
+</g>
+<!-- Szene 3: geteilte Welt -->
+<g id="sc3">
+ <line id="s3line" x1="960" y1="300" x2="960" y2="780" stroke="#F4F2EE" stroke-width="1.5"/>
+ <text id="s3a" class="sl" text-anchor="end" font-size="66"><tspan x="900" y="500">Während wir</tspan><tspan x="900" y="580">in Freiheit leben,</tspan></text>
+ <text id="s3b" class="si" font-size="48" style="fill:#B9BCC2"><tspan x="1020" y="620">kämpfen andere täglich</tspan><tspan x="1020" y="686">um ihre grundlegenden <tspan id="s3r">Rechte.</tspan></tspan></text>
+</g>
+<!-- Szene 4 -->
+<g id="sc4"><g id="s4g">
+ <text id="s4a" class="in" x="960" y="590" text-anchor="middle" font-size="150" font-weight="600" letter-spacing="9">MENSCHENWÜRDE</text>
+ <text id="s4b" class="in" x="960" y="685" text-anchor="middle" font-size="27" font-weight="300" letter-spacing="12" style="fill:#B9BCC2">IST NICHT VERHANDELBAR.</text>
+</g></g>
+<!-- Szene 5 -->
+<g id="sc5"><g id="s5g">
+ <text id="s5a" class="sl" x="200" y="610" font-size="230">Freiheit</text>
+ <text id="s5b" class="si" x="214" y="720" font-size="64" style="fill:#B9BCC2">ist kein Privileg.</text>
+</g></g>
+<!-- Szene 6 -->
+<g id="sc6">
+ <text id="s6a" class="sl" x="960" y="500" text-anchor="middle" font-size="132">Hoffnung</text>
+ <text id="s6b" class="si" x="960" y="585" text-anchor="middle" font-size="42" style="fill:#B9BCC2">darf keine Grenzen kennen.</text>
+ <line id="s6l" x1="0" y1="720" x2="960" y2="720" stroke="#F4F2EE" stroke-width="1.5"/>
+ <line id="s6r" x1="960" y1="720" x2="1920" y2="720" stroke="#F4F2EE" stroke-width="1.5"/>
+ <circle id="s6d" cx="960" cy="830" r="7" fill="#F4F2EE"/>
+</g>
+<!-- Szene 7 -->
+<g id="sc7">
+ <text id="s7a" class="in" x="960" y="400" text-anchor="middle" font-size="24" font-weight="600" letter-spacing="5.5">DR. WOLF-DIETER-SCHÖNE-STIFTUNG</text>
+ <text id="s7b" class="sl" x="960" y="545" text-anchor="middle" font-size="62">Für eine Welt, in der jeder Mensch</text>
+ <text id="s7c" class="sl" x="960" y="630" text-anchor="middle" font-size="62"><tspan id="w_frei">frei,</tspan> <tspan id="w_sicher">sicher</tspan> <tspan id="w_und">und</tspan> <tspan id="w_wuerde">in Würde</tspan> <tspan id="w_leben">leben kann.</tspan></text>
+</g>
+<!-- Szene 8 -->
+<g id="sc8"><g id="crowd"></g>
+ <text id="s8a" class="si" x="960" y="560" text-anchor="middle" font-size="124">Gemeinsam.</text>
+ <text id="s8b" class="in" x="960" y="652" text-anchor="middle" font-size="25" font-weight="300" letter-spacing="11" style="fill:#B9BCC2">KÖNNEN WIR ETWAS VERÄNDERN.</text>
+</g>
+<!-- Szene 9: Foto und Leitsatz -->
+<defs>
+ <linearGradient id="pfL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#000"/><stop offset="0.30" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+ <linearGradient id="pfV" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#000"/><stop offset="0.10" stop-color="#fff"/><stop offset="0.80" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+ <mask id="pmV" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080"><rect x="960" y="120" width="860" height="840" fill="url(#pfV)"/></mask>
+ <mask id="pm" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080"><g mask="url(#pmV)"><rect x="960" y="120" width="860" height="840" fill="url(#pfL)"/></g></mask>
+ <clipPath id="cb0"><rect id="cr0" x="0" y="0" width="1920" height="0"/></clipPath><clipPath id="cb1"><rect id="cr1" x="0" y="0" width="1920" height="0"/></clipPath>
+ <clipPath id="cb2"><rect id="cr2" x="0" y="0" width="1920" height="0"/></clipPath><clipPath id="cb3"><rect id="cr3" x="0" y="0" width="1920" height="0"/></clipPath>
+</defs>
+<g id="sc9">
+ <g mask="url(#pm)"><g id="phg"><image id="photo" href="wolf-dieter_sw.png" x="980" y="132" width="830" height="813" preserveAspectRatio="xMidYMid slice"/></g></g>
+ <text id="q1" class="sl" x="170" y="430" font-size="60">Eine bessere Welt</text>
+ <text id="q2" class="sl" x="170" y="510" font-size="60">beginnt dort, wo wir</text>
+ <text id="q3" class="si" x="170" y="590" font-size="60">aufhören, wegzusehen.</text>
+ <rect id="qr" x="172" y="652" width="48" height="1.5" fill="#8A8F98"/>
+ <text id="ql" class="in" x="172" y="690" font-size="15" font-weight="500" letter-spacing="4" style="fill:#8A8F98">LEITSATZ DER KAMPAGNE</text>
+ <text id="pc" class="in" x="1790" y="985" text-anchor="end" font-size="15" font-weight="400" letter-spacing="2.5" style="fill:#8A8F98">DR. WOLF-DIETER SCHÖNE</text>
+</g>
+<!-- Szene 10: Finale mit Original-Bildzeichen -->
+<defs>
+ <clipPath id="m1"><rect x="0" y="470" width="1920" height="44"/></clipPath>
+ <clipPath id="m2"><rect x="0" y="572" width="1920" height="58"/></clipPath>
+ <clipPath id="m3"><rect x="0" y="656" width="1920" height="48"/></clipPath>
+</defs>
+<g id="sc10">
+ <g id="fmark"><path id="fhr" fill="none" stroke="#F4F2EE"/><path id="fhl" fill="none" stroke="#F4F2EE"/><circle id="fdot" fill="#F4F2EE"/></g>
+ <g clip-path="url(#m1)"><text id="f_n" class="in" x="960" y="505" text-anchor="middle" font-size="30" font-weight="500" letter-spacing="7.5">DR. WOLF-DIETER-SCHÖNE-STIFTUNG</text></g>
+ <rect id="f_r" x="960" y="545" width="0" height="1.2" fill="#8A8F98"/>
+ <g clip-path="url(#m2)"><text id="f_c" class="si" x="960" y="616" text-anchor="middle" font-size="44">Für Freiheit. Für Würde. Für Menschen.</text></g>
+ <g clip-path="url(#m3)"><text id="f_p" class="sl" x="960" y="692" text-anchor="middle" font-size="34" style="fill:#D2D4D9">Eine wunderbare Welt sollte kein Privileg sein.</text></g>
+ <g id="f_b"><rect id="f_br" x="960" y="752" width="0" height="60" fill="none" stroke="#F4F2EE" stroke-width="1.5"/>
+  <text id="f_bt" class="in" x="960" y="789" text-anchor="middle" font-size="20" font-weight="500" letter-spacing="6.5">JETZT SPENDEN</text></g>
+ <text id="f_d" class="in" x="960" y="1002" text-anchor="middle" font-size="17" letter-spacing="1" style="fill:#9EA3AB">Fiktive Stiftung · Schulprojekt im Musikunterricht · Kein echter Spendenaufruf, keine Zahlungsmöglichkeit</text>
+ <text id="f_s" class="in" x="960" y="1034" text-anchor="middle" font-size="13.5" letter-spacing="0.4" style="fill:#6E737B">__CREDITS__</text>
+</g>
+<!-- alt: Logoanimation v2 (nicht mehr verwendet) -->
+<g id="logo"></g>
+<g id="fin">
+ <text id="f1" class="sl" x="960" y="806" text-anchor="middle" font-size="34" style="fill:#D9DBDF">Gemeinsam für eine bessere Welt.</text>
+ <g id="f2"><rect x="815" y="852" width="290" height="62" fill="none" stroke="#F4F2EE" stroke-width="1.5"/>
+  <text class="in" x="960" y="891" text-anchor="middle" font-size="21" font-weight="500" letter-spacing="6.5">JETZT SPENDEN</text></g>
+ <text id="f3" class="in" x="960" y="1032" text-anchor="middle" font-size="18" font-weight="400" letter-spacing="1" style="fill:#8A8F98">Fiktive Organisation · Schulprojekt im Musikunterricht · Kein echter Spendenaufruf, keine Zahlungsmöglichkeit</text>
+</g>
+<rect id="fade" width="1920" height="1080" fill="#000" opacity="0"/>
+</svg>
+<script>
+const T=__T__, L=__L__, K=T.kw, S=T.start;
+const NS='http://www.w3.org/2000/svg', $=id=>document.getElementById(id);
+const cl=x=>x<0?0:x>1?1:x;
+const io=t=>{t=cl(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const eo=t=>{t=cl(t);return 1-Math.pow(1-t,3)};
+const fin=(t,t0,d)=>eo((t-t0)/d), fout=(t,t1,d)=>1-io((t-t1)/d);
+function show(el,t,t0,d=1.2,rise=14){const e=typeof el=='string'?$(el):el;const v=fin(t,t0,d);e.style.opacity=v;e.setAttribute('transform',`translate(0 ${(1-v)*rise})`);return v}
+// ---------- dot grid (Szene 1/2) -----------
+const G=[],cols=31,rows=12,sp=46,gx=960-(cols-1)/2*sp,gy=470-(rows-1)/2*sp;
+let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const x=gx+c*sp,y=gy+r*sp;const e=document.createElementNS(NS,'circle');
+ e.setAttribute('cx',x);e.setAttribute('cy',y);e.setAttribute('r',3);e.setAttribute('fill','#F4F2EE');$('grid').appendChild(e);
+ const center=(c==15&&r==6);G.push({e,d:Math.hypot(x-960,y-470),center,keep:center||rnd()<0.09,j:rnd()})}
+// ---------- crowd (Szene 8) -----------
+const C=[];for(let i=0;i<70;i++){const e=document.createElementNS(NS,'circle');const a=rnd()*Math.PI*2,rr=420+rnd()*520;
+ e.setAttribute('r',2.6);e.setAttribute('fill','#F4F2EE');$('crowd').appendChild(e);C.push({e,x:960+Math.cos(a)*rr*1.25,y:540+Math.sin(a)*rr*0.62,j:rnd()})}
+// ---------- logo (identische Geometrie + Timing wie Logoanimation) -----------
+const R=400,SW=58,GAP=56,DOTY=230,DOTR=62,ga=GAP/2*Math.PI/180,m=L.mark,s=m.s,P=(x,y)=>[m.x+x*s,m.y+y*s];
+const bot=P(500,900),rt=P(500+R*Math.sin(ga),500-R*Math.cos(ga)),lt=P(500-R*Math.sin(ga),500-R*Math.cos(ga)),rr=R*s,arcLen=rr*(Math.PI-ga);
+$('logo').innerHTML=`<path id="hr" d="M${bot} A${rr} ${rr} 0 0 0 ${rt}" fill="none" stroke="#FFFFFF" stroke-width="${SW*s}" stroke-dasharray="${arcLen} ${arcLen*2}"/>
+<path id="hl" d="M${bot} A${rr} ${rr} 0 0 1 ${lt}" fill="none" stroke="#FFFFFF" stroke-width="${SW*s}" stroke-dasharray="${arcLen} ${arcLen*2}"/>
+<circle id="ldot" cx="${m.x+500*s}" cy="${m.y+DOTY*s}" r="${DOTR*s}" fill="#FFFFFF"/>`+L.items.map(it=>`<path class="g-${it.g}" data-op="${it.op||1}" d="${it.d}" fill="#FFFFFF"/>`).join('');
+const TL={ring:[0.6,2.6],dot:[2.7,1.4],groups:{wm:[3.9,1.6],claim:[5.4,1.6]}};
+function scene(id,t,t0,t1){const v=(t>=t0-0.01&&t<=t1+0.6)?fout(t,t1,0.45):0;$(id).style.opacity=v;$(id).style.display=v>0.001?'':'none';return v>0.001}
+
+function render(t){
+ // Szene 1
+ if(scene('sc1',t,0,5.75)){show('t1',t,1.2,1.8,10);const a=show('t2',t,3.4,1.6,10);$('t1').style.opacity=fin(t,1.2,1.8)*(1-0.55*fin(t,3.5,1.6));}
+ // Szene 2 (mit Satz 1)
+ if(scene('sc2',t,S[1]-0.2,S[3]-0.5)){
+  for(const g of G){let o;const appear=K.s2_viele+0.15+g.d/1100*1.6;
+   if(g.center){o=fin(t,S[1]+0.15,0.9);g.e.setAttribute('r',3+3*(1-fin(t,K.s2_viele+0.1,1.2)));}
+   else o=fin(t,appear,0.8);
+   if(!g.keep) o*=1-0.82*fin(t,K.s2_uner-0.1+g.j*0.6,1.1);
+   g.e.style.opacity=o}
+  show('s2a',t,K.s2_uner-0.35,1.3,10);
+  $('grid').setAttribute('transform',`translate(0 ${-(t-S[1])*2.2})`);}
+ // Szene 3
+ if(scene('sc3',t,S[3]-0.1,S[4]-0.5)){show('s3a',t,S[3]-0.05,1.2,10);
+  const lv=io((t-(K.s3_kaempfen-0.35))/1.0);$('s3line').setAttribute('y2',300+480*lv);$('s3line').style.opacity=lv>0?0.55:0;
+  show('s3b',t,K.s3_kaempfen-0.05,1.3,10);$('s3r').style.fill=t>K.s3_rechte-0.1?`rgba(244,242,238,${0.72+0.28*fin(t,K.s3_rechte-0.1,0.6)})`:'';}
+ // Szene 4
+ if(scene('sc4',t,S[4]-0.1,S[5]-0.45)){show('s4a',t,K.s4_wuerde-0.12,1.1,0);show('s4b',t,K.s4_nicht-0.1,1.0,8);
+  const k=1+0.028*cl((t-S[4])/3.5);$('s4g').setAttribute('transform',`translate(960 560) scale(${k}) translate(-960 -560)`);}
+ // Szene 5
+ if(scene('sc5',t,S[5]-0.1,S[6]-0.45)){show('s5a',t,K.s5_frei-0.08,1.1,0);show('s5b',t,K.s5_kein-0.25,1.0,8);
+  $('s5g').setAttribute('transform',`translate(${-(t-S[5])*6} 0)`);}
+ // Szene 6
+ if(scene('sc6',t,S[6]-0.1,S[7]-0.5)){show('s6a',t,K.s6_hoff-0.1,1.2,8);show('s6b',t,K.s6_grenzen-0.35,1.1,6);
+  const d=io((t-(S[6]-0.05))/1.3), g=io((t-(K.s6_grenzen+0.05))/1.5)*190;
+  $('s6l').setAttribute('x1',960-960*d);$('s6l').setAttribute('x2',960-g);$('s6r').setAttribute('x1',960+g);$('s6r').setAttribute('x2',960+960*d);
+  $('s6l').style.opacity=$('s6r').style.opacity=0.6;
+  const dv=io((t-(K.s6_grenzen+0.35))/2.2);$('s6d').setAttribute('cy',830-200*dv);$('s6d').style.opacity=fin(t,K.s6_grenzen+0.1,0.6);}
+ $('sc7').style.display='none';$('sc8').style.display='none';
+ if(false&&scene('sc7',t,S[7]-0.1,S[8]-0.5)){show('s7a',t,K.s7_doktor-0.1,1.3,6);show('s7b',t,K.s7_welt-0.45,1.3,8);
+  const c=$('s7c');c.style.opacity=fin(t,K.s7_welt-0.2,1.3);
+  const hl=(id,t0)=>{$(id).style.opacity=0.28+0.72*fin(t,t0,0.55)};
+  hl('w_frei',K.s7_frei-0.08);hl('w_sicher',K.s7_sicher-0.08);hl('w_und',K.s7_wuerde-0.35);hl('w_wuerde',K.s7_wuerde-0.08);hl('w_leben',K.s7_wuerde+0.45);}
+ if(false&&scene('sc8',t,S[8]-0.4,T.vo_end+0.25)){show('s8a',t,K.s8_gem-0.12,1.3,8);show('s8b',t,K.s8_koennen-0.05,1.2,6);
+  for(const c of C){const p=io((t-(S[8]-0.4))/4.2)*0.42;const x=c.x+(960-c.x)*p,y=c.y+(560-c.y)*p;c.e.setAttribute('cx',x);c.e.setAttribute('cy',y);c.e.style.opacity=0.55*fin(t,S[8]-0.4+c.j*0.8,0.9);}}
+ // Finale
+ const lt0=1e9, u=t-lt0; $('logo').style.display=u>=0?'':'none'; $('fin').style.display=u>=0?'':'none';
+ if(u>=0){const ring=io((u-TL.ring[0])/TL.ring[1]), dot=eo((u-TL.dot[0])/TL.dot[1]);
+  for(const id of ['hr','hl']){$(id).setAttribute('stroke-dashoffset',arcLen*(1-ring));$(id).style.opacity=ring>0.001?1:0;}
+  $('ldot').style.opacity=dot;$('ldot').setAttribute('transform',`translate(0 ${-(1-dot)*90*s})`);
+  document.querySelectorAll('#logo [class^=g-]').forEach(e=>{const g=e.getAttribute('class').slice(2);const [a,d]=TL.groups[g];const v=eo((u-a)/d);e.style.opacity=v*(+e.dataset.op);e.setAttribute('transform',`translate(0 ${(1-v)*10})`);});
+  show('f1',t,lt0+7.0,1.5,8);show('f2',t,lt0+8.3,1.3,6);show('f3',t,lt0+9.0,1.4,0);}
+ renderV3(t);
+ $('fade').setAttribute('opacity',bez(.45,0,.55,1)(cl((t-(T.TOTAL-1.5))/1.5)));
+}
+
+// ================= v3: Szene 9 (Foto + Leitsatz) und Szene 10 (neues Logo) =================
+const Q={"yes": 24.673, "I": 27.313, "think": 27.713, "myself": 28.533, "what": 32.393, "world": 34.273, "swell": 36.633, "oh": 42.713, "chord": 44.933};
+const NB={xs:[230,410,590,770],w:46,top:140,bot:860,y0:290,y1:760,dx:95}, LS=0.33, NOX=960-500*LS, NOY=175;
+function barPath(x,dx){const w=NB.w,top=NB.top,bot=NB.bot,y0=NB.y0,h=NB.y1-NB.y0;
+ const P=(o)=>[[x+o,top],[x+o,y0],[x+o,y0+h*0.28],[x+o+dx,y0+h*0.22],[x+o+dx,y0+h*0.5],[x+o+dx,y0+h*0.78],[x+o,NB.y1-h*0.28],[x+o,NB.y1],[x+o,bot]];
+ const l=P(-w/2),r=P(w/2),f=p=>p.map(v=>(v*1).toFixed(2)).join(' ');
+ const T_=p=>[NOX+p[0]*LS,NOY+p[1]*LS];const L=l.map(T_),Rr=r.map(T_);
+ return `M${f(L[0])} L${f(L[1])} C${f(L[2])} ${f(L[3])} ${f(L[4])} C${f(L[5])} ${f(L[6])} ${f(L[7])} L${f(L[8])} L${f(Rr[8])} L${f(Rr[7])} C${f(Rr[6])} ${f(Rr[5])} ${f(Rr[4])} C${f(Rr[3])} ${f(Rr[2])} ${f(Rr[1])} L${f(Rr[0])} Z`}
+const eio=t=>{t=cl(t);return t<.5?16*t**5:1-Math.pow(-2*t+2,5)/2};   // quintisch für Logo-Bewegungen
+
+function bez(x1,y1,x2,y2){return function(x){if(x<=0)return 0;if(x>=1)return 1;let t=x;for(let i=0;i<12;i++){const cx=3*x1*t*(1-t)**2+3*x2*t*t*(1-t)+t**3-x;const dx=3*x1*(1-t)**2+6*(x2-x1)*t*(1-t)+3*(1-x2)*t*t;if(Math.abs(cx)<1e-6)break;t-=cx/(dx||1e-6);t=Math.min(1,Math.max(0,t));}return 3*y1*t*(1-t)**2+3*y2*t*t*(1-t)+t**3;}}
+function renderV3(t){
+ // Szene 9
+ const s9on=t>=25.5&&t<=Q.what+1.0;
+ $('sc9').style.display=s9on?'':'none';
+ if(s9on){const out=1-bez(.45,0,.55,1)(cl((t-(Q.what-0.7))/0.9));
+  $('sc9').style.opacity=out;
+  const pv=fin(t,26.2,2.0);$('photo').style.opacity=pv;
+  const z=1.0+0.07*cl((t-26.2)/7.5); $('phg').setAttribute('transform',`translate(1395 538) scale(${z}) translate(-1395 -538) translate(${-(t-26.2)*3} 0)`);
+  show('q1',t,Q.I-0.35,1.5,14);show('q2',t,Q.think+0.15,1.5,14);show('q3',t,Q.myself+0.35,1.6,14);
+  $('qr').style.opacity=fin(t,Q.myself+1.4,1.0);$('qr').setAttribute('width',48*eo((t-(Q.myself+1.4))/1.0));
+  show('ql',t,Q.myself+1.6,1.2,0);show('pc',t,27.6,1.4,0);}
+ // Szene 10 (v4)
+ const on10=t>=Q.what-0.3; $('sc10').style.display=on10?'':'none';
+ if(on10){
+  const R=400,SW=58,GAP=56,DOTY=230,DOTR=62,ga=GAP/2*Math.PI/180, sc=0.23, sz=1000*sc;
+  // Position: zuerst optisch zentriert, dann gleitet das Zeichen nach oben
+  const mv=bez(.65,0,.35,1)(cl((t-(Q.swell-0.1))/1.6));
+  const ox=960-sz/2, oy=(540-sz*0.55)*(1-mv)+150*mv;
+  const P=(x,y)=>[ox+x*sc,oy+y*sc], rr=R*sc, al=rr*(Math.PI-ga);
+  const bot=P(500,900),rt=P(500+R*Math.sin(ga),500-R*Math.cos(ga)),lt=P(500-R*Math.sin(ga),500-R*Math.cos(ga));
+  const ring=bez(.45,0,.2,1)(cl((t-(Q.what-0.15))/((Q.world)-(Q.what-0.15))));
+  for(const [id,end,sw] of [['fhr',rt,0],['fhl',lt,1]]){const e=$(id);e.setAttribute('d',`M${bot} A${rr} ${rr} 0 0 ${sw} ${end}`);e.setAttribute('stroke-width',SW*sc);
+   e.setAttribute('stroke-dasharray',`${al} ${al*2}`);e.setAttribute('stroke-dashoffset',al*(1-ring));e.style.opacity=ring>0.001?1:0;}
+  const dp=cl((t-(Q.world-0.35))/1.25), dy=bez(.2,.7,.25,1)(dp);
+  const d=$('fdot');d.setAttribute('cx',ox+500*sc);d.setAttribute('cy',oy+DOTY*sc-(1-dy)*110*sc);d.setAttribute('r',DOTR*sc);d.style.opacity=bez(.3,0,.3,1)(cl(dp*1.6));
+  // maskierte Textenthüllungen
+  const rev=(id,t0,dist)=>{const v=bez(.16,1,.3,1)(cl((t-t0)/1.35));const e=$(id);e.setAttribute('transform',`translate(0 ${(1-v)*dist})`);e.style.opacity=cl((t-t0)/0.35);};
+  rev('f_n',Q.swell+0.55,46);
+  const rl=bez(.65,0,.35,1)(cl((t-(Q.swell+1.25))/1.1))*64;$('f_r').setAttribute('x',960-rl);$('f_r').setAttribute('width',2*rl);
+  rev('f_c',Q.swell+1.55,60);
+  rev('f_p',Q.oh-0.12,50);
+  const bw=bez(.65,0,.35,1)(cl((t-(Q.chord-0.1))/1.0))*150;$('f_br').setAttribute('x',960-bw);$('f_br').setAttribute('width',2*bw);$('f_br').style.opacity=bw>0.5?1:0;
+  $('f_bt').style.opacity=bez(.3,0,.3,1)(cl((t-(Q.chord+0.55))/0.8));
+  $('f_d').style.opacity=0.9*bez(.3,0,.3,1)(cl((t-(Q.chord+1.2))/1.2));$('f_s').style.opacity=0.9*bez(.3,0,.3,1)(cl((t-(Q.chord+1.5))/1.2));
+ }
+}
+window.render=render;
+// Vorschau-Modus: im Browser in Echtzeit abspielen
+if(!window.__RENDER__){const st=document.getElementById('stage');const fit=()=>{const k=Math.min(innerWidth/1920,innerHeight/1080);st.style.width=1920*k+'px';st.style.height=1080*k+'px'};fit();onresize=fit;}
+render(0);
+</script></body></html>

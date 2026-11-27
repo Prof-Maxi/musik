@@ -55,3 +55,10 @@ Ein Seitenrand von je 26 px gleicht das Seitenverhältnis 1,73 : 1 aus.
   - Claim und Spendenaufruf zum „Oh yeah“
 - Hongkong-Bild und Tonspur sind bitgenau unverändert gegenüber Version 2. Die Gesamtdauer beträgt weiterhin 136,1 s.
 - Das Foto und das fertige Video liegen **nicht** im Repository, weil es öffentlich ist.
+
+## Version 4 (27.11.2026): international
+- Der Dokumentarteil (0:00–1:26,4) ist jetzt eine Montage aus Hongkong, der Ukraine (Tschernihiw, Awdijiwka, Tschassiw Jar), Bangladesch (Rohingya), dem Tschad (Geflüchtete aus dem Sudan), Sambia, der Türkei (Erdbeben) und Indonesien.
+  Die Schnitte liegen auf den Liedzeilen. Die Dramaturgie führt von Leid über Solidarität zur Hoffnung.
+- Alle Quellen und Lizenzen stehen in `08_version4/Quellenverzeichnis.md`. Die Schnittliste liegt in `_werkzeuge/version4/edl.json`.
+- Logo: wieder das ursprüngliche Bildzeichen (offener Kreis mit Punkt), mit einer neuen Finalanimation.
+- Die Tonspur ist bitgenau dieselbe wie in Version 2 und 3. Länge: 136,1 s.

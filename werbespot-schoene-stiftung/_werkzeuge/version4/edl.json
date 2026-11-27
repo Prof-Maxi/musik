@@ -1,0 +1,194 @@
+[
+ {
+  "t0": 0.0,
+  "t1": 5.8,
+  "src": "../hk/hk.mov",
+  "in": 0.0,
+  "label": "Hongkong – Demonstrant (Intro)",
+  "full_range": true
+ },
+ {
+  "t0": 5.8,
+  "t1": 9.67,
+  "src": "src/No_Room_Left_for_Rohingya_Refugees.webm.1080p.vp9.webm",
+  "in": 5.0,
+  "label": "Rohingya auf der Flucht, Bangladesch 2017 – „trees of green“",
+  "full_range": false
+ },
+ {
+  "t0": 9.67,
+  "t1": 13.8,
+  "src": "src/Chernihiv_after_Russian_shelling_3_March_2022.webm.720p.vp9.webm",
+  "in": 20.99,
+  "label": "Trümmer mit roten Gegenständen, Chernihiv 2022 – „red roses too“",
+  "full_range": false
+ },
+ {
+  "t0": 13.8,
+  "t1": 16.57,
+  "src": "src/Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.webm.1080p.vp9.webm",
+  "in": 43.59,
+  "label": "Geflüchtete aus dem Sudan, Tschad 2023 – „bloom for me and you“",
+  "full_range": false
+ },
+ {
+  "t0": 16.57,
+  "t1": 19.69,
+  "src": "src/No_Room_Left_for_Rohingya_Refugees.webm.1080p.vp9.webm",
+  "in": 50.4,
+  "label": "Rohingya-Familie unter Planen",
+  "full_range": false
+ },
+ {
+  "t0": 19.69,
+  "t1": 24.83,
+  "src": "src/Avdiivka_after_Russian_bombing,_2023-03-27.webm",
+  "in": 11.16,
+  "label": "„Ich ♥ Awdijiwka“, 2023 – „and I think to myself“",
+  "full_range": false
+ },
+ {
+  "t0": 24.83,
+  "t1": 29.6,
+  "src": "../hk/hk.mov",
+  "in": 8.0,
+  "label": "Hongkong – „what a wonderful world“",
+  "full_range": true
+ },
+ {
+  "t0": 29.6,
+  "t1": 32.43,
+  "src": "../hk/hk.mov",
+  "in": 24.0,
+  "label": "Hongkong – Demonstrierende",
+  "full_range": true
+ },
+ {
+  "t0": 32.43,
+  "t1": 37.31,
+  "src": "../hk/hk.mov",
+  "in": 58.4,
+  "label": "Hongkong – Tränengasgranate – „skies of blue“",
+  "full_range": true
+ },
+ {
+  "t0": 37.31,
+  "t1": 41.05,
+  "src": "../hk/hk.mov",
+  "in": 63.6,
+  "label": "Hongkong – Tränengas – „clouds of white“",
+  "full_range": true
+ },
+ {
+  "t0": 41.05,
+  "t1": 43.61,
+  "src": "src/Chasiv_Yar_during_the_war_(2024-08-10).webm.720p.vp9.webm",
+  "in": 0.9,
+  "label": "Chasiw Jar aus der Luft, 2024 – „bright blessed day“",
+  "full_range": false
+ },
+ {
+  "t0": 43.61,
+  "t1": 46.41,
+  "src": "../hk/hk.mov",
+  "in": 72.0,
+  "label": "Hongkong – Polizei bei Nacht – „dark sacred night“",
+  "full_range": true
+ },
+ {
+  "t0": 46.41,
+  "t1": 49.0,
+  "src": "src/Chernihiv_after_Russian_shelling_3_March_2022.webm.720p.vp9.webm",
+  "in": 0.0,
+  "label": "Rauch über Chernihiv, 2022 – „and I think to myself“",
+  "full_range": false
+ },
+ {
+  "t0": 49.0,
+  "t1": 51.71,
+  "src": "src/Avdiivka_after_Russian_bombing,_2023-03-27.webm",
+  "in": 7.6,
+  "label": "Zerstörte Wohnblöcke, Awdijiwka",
+  "full_range": false
+ },
+ {
+  "t0": 51.71,
+  "t1": 55.5,
+  "src": "src/Tarihi_Antep_Kalesi_Depremde_Zarar_Gördü.webm.720p.vp9.webm",
+  "in": 65.12,
+  "label": "Erdbeben, Gaziantep 2023 – „what a wonderful world“",
+  "full_range": false
+ },
+ {
+  "t0": 55.5,
+  "t1": 59.17,
+  "src": "src/Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.webm.1080p.vp9.webm",
+  "in": 31.0,
+  "label": "Lager im Tschad aus der Luft",
+  "full_range": false
+ },
+ {
+  "t0": 59.17,
+  "src": "src/No_Room_Left_for_Rohingya_Refugees.webm.1080p.vp9.webm",
+  "in": 127.75,
+  "label": "Rohingya-Kinder – „the colors of the rainbow“",
+  "full_range": false,
+  "t1": 62.65
+ },
+ {
+  "t0": 62.65,
+  "src": "src/No_Room_Left_for_Rohingya_Refugees.webm.1080p.vp9.webm",
+  "in": 114.62,
+  "label": "Rohingya-Frauen, Bangladesch 2017",
+  "full_range": false,
+  "t1": 66.12
+ },
+ {
+  "t0": 66.12,
+  "src": "src/Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.webm.1080p.vp9.webm",
+  "in": 46.8,
+  "label": "Geflüchtete Frauen im Tschad – „faces of people going by“",
+  "full_range": false,
+  "t1": 68.64
+ },
+ {
+  "t0": 68.64,
+  "src": "src/Congolese_refugees_in_Zambia.webm.1080p.vp9.webm",
+  "in": 57.22,
+  "label": "Siedlung Mantapala, Sambia",
+  "full_range": false,
+  "t1": 72.89
+ },
+ {
+  "t0": 72.89,
+  "src": "src/Avdiivka_after_Russian_bombing,_2023-03-27.webm",
+  "in": 207.0,
+  "label": "Evakuierungshelfer, Awdijiwka – „friends shaking hands“",
+  "full_range": false,
+  "t1": 75.95
+ },
+ {
+  "t0": 75.95,
+  "src": "src/Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.webm.1080p.vp9.webm",
+  "in": 118.0,
+  "label": "Wasserversorgung im Lager, Tschad",
+  "full_range": false,
+  "t1": 80.93
+ },
+ {
+  "t0": 80.93,
+  "t1": 83.6,
+  "src": "src/Congolese_refugees_in_Zambia.webm.1080p.vp9.webm",
+  "in": 35.0,
+  "label": "Krankenstation Mantapala, Mutter mit Neugeborenem – „I love you“",
+  "full_range": false
+ },
+ {
+  "t0": 83.6,
+  "t1": 86.3667,
+  "src": "src/Learning_center_helps_prepare_young_refugees_for_resettlement.webm.1080p.vp9.webm",
+  "in": 27.0,
+  "label": "Lernzentrum für geflüchtete Kinder, Indonesien",
+  "full_range": false
+ }
+]
