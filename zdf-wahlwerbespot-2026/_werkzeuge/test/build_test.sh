@@ -13,8 +13,8 @@ cat > $R/timeline.json <<EOF
  "vo1_t":$VO1_T,"a_end":$A_END,"drop":$DROP,"card_in":$CARD_IN,"footnote":$FOOT,"logo_in":$LOGO_IN,"total":$TOTAL,
  "vo1_words":[{"w":"Geld","s":0.0},{"w":"allein","s":0.30},{"w":"macht","s":0.68},{"w":"nicht","s":1.08},{"w":"glücklich.","s":1.38}]}
 EOF
-python3 - "$W/test_template.html" "$R/timeline.json" "$R/page.html" <<'EOF'
-import sys;t=open(sys.argv[1]).read().replace('__TIMELINE__',open(sys.argv[2]).read());open(sys.argv[3],'w').write(t)
+python3 - "$W/test_cd_template.html" "$R/timeline.json" "$R/page.html" <<'EOF'
+import sys;import os;cd='file://'+os.path.abspath(os.path.dirname(sys.argv[1])+'/../../01_corporate-design');t=open(sys.argv[1]).read().replace('__TIMELINE__',open(sys.argv[2]).read()).replace('__CD__',cd);open(sys.argv[3],'w').write(t)
 EOF
 
 # ---- Frames ----
@@ -24,7 +24,7 @@ node -e "
 const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1920,height:1080}});
 await p.goto('file://$R/page.html');await p.evaluate(()=>document.fonts.ready);await p.evaluate(()=>window.READY);
-await p.evaluate(async()=>{for(const f of ['IDB','IDX','IDS','IDM','IR','IL'])await document.fonts.load('40px '+f)});
+await p.evaluate(async()=>{for(const f of ['500 40px LS','600 40px LS','700 40px LS','800 40px LS','400 40px IN','500 40px IN'])await document.fonts.load(f)});
 const N=Math.round($TOTAL*30);
 for(let f=0;f<N;f++){await p.evaluate(t=>render(t),f/30);await p.screenshot({path:'$R/frames/f'+String(f).padStart(5,'0')+'.png'});}
 await b.close();console.log('frames',N);})();"

@@ -27,4 +27,4 @@ Danach:
 - Musik: ElevenLabs Music v2.5 über Higgsfield (ernster Teil, dann Drop). Soundeffekte von Epidemic Sound über Higgsfield
 - Motion Design: `_werkzeuge/test/test_template.html` (Canvas), Build: `_werkzeuge/test/build_test.sh`
 - Kosten: 9,25 Credits
-- Das CD ist vorläufig (Navy/Gelb/Weiß, Inter Display), bis die Plakate vorliegen
+- Corporate Design nach den drei Wahlplakaten: siehe `01_corporate-design/CD-Tokens.md` (League Spartan, Navy #132962, Gelb #F9D648, Pixelblöcke, gelbes Band). Motion Design: `_werkzeuge/test/test_cd_template.html`

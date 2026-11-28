@@ -2,3 +2,7 @@
 02_higgsfield/
 *.mov
 _render/
+# Plakate (teils mit realen Personen) und Fotos nicht ins öffentliche Repository
+*.jpg
+*.jpeg
+*.png
