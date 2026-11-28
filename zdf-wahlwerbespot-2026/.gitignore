@@ -1,0 +1,4 @@
+# Higgsfield-Rohclips und große Zwischenstände nicht ins Repository
+02_higgsfield/
+*.mov
+_render/
