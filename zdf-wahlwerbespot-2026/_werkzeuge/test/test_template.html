@@ -1,0 +1,156 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:IDB;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-Black.otf)}
+@font-face{font-family:IDX;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:IDS;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-SemiBold.otf)}
+@font-face{font-family:IDM;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-Medium.otf)}
+@font-face{font-family:IR;src:url(file:///usr/share/fonts/opentype/inter/Inter-Regular.otf)}
+@font-face{font-family:IL;src:url(file:///usr/share/fonts/opentype/inter/InterDisplay-Light.otf)}
+html,body{margin:0;background:#000}
+canvas{display:block}
+</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// ZDF test sequence: motion design + compositing of the graded Higgsfield footage.
+const T = __TIMELINE__;
+const W=1920,H=1080,c=document.getElementById('c'),g=c.getContext('2d');
+const NAVY='#0A1C40',NAVY2='#061128',NAVY3='#12295A',YEL='#FFD200',WHITE='#FFFFFF';
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const lin=(t,a,b)=>clamp((t-a)/(b-a));
+const eOut=x=>1-Math.pow(1-x,3), eIn=x=>x*x*x, eIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eExpo=x=>x>=1?1:1-Math.pow(2,-10*x);
+const eQuint=x=>1-Math.pow(1-x,5);
+// preload footage frames
+const frames=[];let loaded=0;
+window.READY=new Promise(res=>{
+  for(let i=0;i<T.porsche_frames;i++){const im=new Image();im.onload=()=>{if(++loaded==T.porsche_frames)res()};
+    im.src=T.porsche_dir+'/f'+String(i+1).padStart(4,'0')+'.jpg';frames.push(im)}
+});
+function grid(alpha,off){ // fine digital grid
+  g.save();g.globalAlpha=alpha;g.strokeStyle='rgba(120,160,255,0.16)';g.lineWidth=1;
+  const s=96;for(let x=(off%s)-s;x<W+s;x+=s){g.beginPath();g.moveTo(x+.5,0);g.lineTo(x+.5,H);g.stroke()}
+  for(let y=0;y<H;y+=s){g.beginPath();g.moveTo(0,y+.5);g.lineTo(W,y+.5);g.stroke()}
+  g.restore();
+}
+function navyBG(t,glow=1){
+  const r=g.createRadialGradient(W*0.62+Math.sin(t*0.4)*60,H*0.38,50,W*0.5,H*0.5,W*0.85);
+  r.addColorStop(0,NAVY3);r.addColorStop(0.45,NAVY);r.addColorStop(1,NAVY2);
+  g.fillStyle=r;g.fillRect(0,0,W,H);
+  // soft light sweep
+  g.save();g.globalAlpha=0.10*glow;const x=((t*90)%(W*2))-W*0.5;
+  const lg=g.createLinearGradient(x-500,0,x+500,H);lg.addColorStop(0,'rgba(255,255,255,0)');lg.addColorStop(.5,'rgba(190,210,255,1)');lg.addColorStop(1,'rgba(255,255,255,0)');
+  g.fillStyle=lg;g.fillRect(0,0,W,H);g.restore();
+}
+function spaced(txt,x,y,track){ // letter-spaced text, returns width
+  let cx=x;for(const ch of txt){g.fillText(ch,cx,y);cx+=g.measureText(ch).width+track}return cx-x-track;
+}
+function spacedW(txt,track){let w=0;for(const ch of txt)w+=g.measureText(ch).width+track;return w-track}
+function maskedLine(txt,font,x,y,p,color,lineH){ // text rising out of a mask
+  g.save();g.font=font;const m=g.measureText(txt);
+  g.beginPath();g.rect(x-20,y-lineH*0.95,m.width+60,lineH*1.25);g.clip();
+  const dy=(1-eQuint(p))*lineH*1.05;g.fillStyle=color;g.globalAlpha=clamp(p*3);g.fillText(txt,x,y+dy);g.restore();return m.width;
+}
+
+// ---------- SECTION A: sincere opening ----------
+function secA(t){
+  navyBG(t);grid(0.5*lin(t,0,1.5),t*12);
+  const z=1+0.035*lin(t,0,T.a_end);g.save();g.translate(W/2,H/2);g.scale(z,z);g.translate(-W/2,-H/2);
+  // kicker
+  g.font='600 26px IDS';g.fillStyle=YEL;g.globalAlpha=eOut(lin(t,0.35,1.1));
+  spaced('ZDF  ·  GRUNDSATZPROGRAMM 2026',180,380,5);
+  g.globalAlpha=1;g.fillStyle=YEL;g.fillRect(180,404,140*eExpo(lin(t,0.45,1.3)),4);
+  // words synced to VO
+  g.font='600 104px IDS';let x=180;
+  T.vo1_words.forEach((w,i)=>{if(i==3)x=180;const y=i<3?540:670;
+    const p=lin(t,T.vo1_t+w.s-0.06,T.vo1_t+w.s+0.38);
+    const ww=maskedLine(w.w,'600 104px IDS',x,y,p,WHITE,120);x+=ww+30});
+  g.restore();
+  // fade to black at the stop
+  const f=lin(t,T.a_end-0.12,T.a_end);if(f>0){g.fillStyle='rgba(0,0,0,'+f+')';g.fillRect(0,0,W,H)}
+}
+// re-layout: two lines "Geld allein macht" / "nicht glücklich."
+// ---------- SECTION C: footage ----------
+function footage(t){
+  const i=clamp(Math.floor((t-T.drop)*30),0,T.porsche_frames-1);g.drawImage(frames[i],0,0,W,H);
+  // flash frame on the drop
+  const fl=1-lin(t,T.drop,T.drop+0.18);if(fl>0){g.fillStyle='rgba(255,250,235,'+(0.55*fl)+')';g.fillRect(0,0,W,H)}
+  // cinemascope bars
+  const bar=138;g.fillStyle='#000';g.fillRect(0,0,W,bar);g.fillRect(0,H-bar,W,bar);
+  // corner bug
+  const b=eOut(lin(t,T.drop+0.9,T.drop+1.4));if(b>0){g.save();g.globalAlpha=b;g.fillStyle=YEL;g.fillRect(W-96-118,bar+44,118,46);
+    g.fillStyle=NAVY;g.font='900 34px IDB';g.fillText('ZDF',W-96-104,bar+80);g.restore()}
+}
+// ---------- SECTION D: programme card ----------
+function panelWipe(t,t0,dur,colorA,colorB){ // two skewed panels sweeping from right; returns cover progress
+  const p=eIO(lin(t,t0,t0+dur));const sk=260;
+  const xa=W+sk-(W+2*sk)*p;
+  g.fillStyle=colorB;g.beginPath();g.moveTo(xa-40,0);g.lineTo(W+sk,0);g.lineTo(W+sk,H);g.lineTo(xa-40-sk,H);g.closePath();g.fill();
+  const pb=eIO(lin(t,t0+0.08,t0+dur+0.08));const xb=W+sk-(W+2*sk)*pb;
+  g.fillStyle=colorA;g.beginPath();g.moveTo(xb,0);g.lineTo(W+sk*2,0);g.lineTo(W+sk*2,H);g.lineTo(xb-sk,H);g.closePath();g.fill();
+  return pb;
+}
+function stockLine(t,t0,alpha){ // abstract rising price curve
+  const p=eOut(lin(t,t0,t0+2.2));if(p<=0)return;g.save();g.globalAlpha=alpha;g.strokeStyle=YEL;g.lineWidth=3;g.beginPath();
+  const N=120;for(let k=0;k<=N*p;k++){const u=k/N;const x=-40+u*(W+80);
+    const y=H*0.86-Math.pow(u,3.2)*H*0.62-Math.sin(u*38)*14*(1-u)-Math.sin(u*91)*6;k?g.lineTo(x,y):g.moveTo(x,y)}
+  g.stroke();g.restore();
+}
+function secD(t){
+  const t0=T.card_in;
+  if(t<t0+0.7) footage(t);
+  panelWipe(t,t0,0.55,NAVY,YEL);
+  if(t<t0+0.45)return;
+  navyBG(t,0.6);grid(0.35,t*20);stockLine(t,t0+0.4,0.38);
+  // kicker
+  g.font='700 30px IDX';g.fillStyle=YEL;const k=eOut(lin(t,t0+0.5,t0+0.9));g.globalAlpha=k;spaced('MOBILITÄT',200,398,9);g.globalAlpha=1;
+  g.fillRect(200,424,170*eExpo(lin(t,t0+0.5,t0+1.0)),5);
+  // headline
+  let x=200;const words=['Porsche','für','alle.'];
+  words.forEach((w,i)=>{const p=lin(t,t0+0.62+i*0.09,t0+1.12+i*0.09);x+=maskedLine(w,'900 168px IDB',x,600,p,WHITE,190)+38});
+  // asterisk in yellow, lands last
+  const pa=lin(t,t0+1.0,t0+1.3);maskedLine('*','900 120px IDB',x-34,560,pa,YEL,150);
+  // dry footnote
+  const pf=eOut(lin(t,T.footnote,T.footnote+0.5));g.save();g.globalAlpha=pf*0.85;g.fillStyle=WHITE;g.font='400 34px IR';
+  g.fillText('*Bonität vorausgesetzt.',204,700+(1-pf)*10);g.restore();
+}
+// ---------- SECTION E: logo sting ----------
+function secE(t){
+  const t0=T.logo_in;
+  // yellow slab sweeps diagonally, navy behind
+  const p=eIO(lin(t,t0,t0+0.5));
+  if(p<1){secD(t)}
+  g.save();g.beginPath();const sk=420;const xr=-sk+(W+2*sk)*p;
+  g.moveTo(-sk,0);g.lineTo(xr,0);g.lineTo(xr-sk,H);g.lineTo(-sk,H);g.closePath();g.clip();
+  navyBG(t,0.4);grid(0.25,t*8);
+  // ZDF wordmark: big letters rising
+  const cx=W/2;g.textBaseline='alphabetic';g.font='900 300px IDB';
+  const word='ZDF';const tw=spacedW(word,-6);let x=cx-tw/2;const y=560;
+  [...word].forEach((ch,i)=>{const q=lin(t,t0+0.25+i*0.07,t0+0.75+i*0.07);g.save();g.beginPath();g.rect(x-10,y-250,260,300);g.clip();
+    g.fillStyle=WHITE;g.fillText(ch,x,y+(1-eQuint(q))*300);g.restore();x+=g.measureText(ch).width-6});
+  // yellow underline block
+  const ub=eExpo(lin(t,t0+0.6,t0+1.1));g.fillStyle=YEL;g.fillRect(cx-tw/2-4,y+28,(tw+14)*ub,18);
+  // party name
+  const pn=eOut(lin(t,t0+0.85,t0+1.3));g.globalAlpha=pn;g.fillStyle=WHITE;g.font='500 36px IDM';
+  const nm='ZUKUNFTSBÜNDNIS DIGITALER FORTSCHRITT';const nw=spacedW(nm,7);spaced(nm,cx-nw/2,y+112,7);
+  // claim
+  const pc=eOut(lin(t,t0+1.15,t0+1.6));g.globalAlpha=pc;g.font='800 58px IDX';
+  const a='Digital denken. ',b='Zukunft lenken.';const aw=g.measureText(a).width,bw=g.measureText(b).width;
+  g.fillStyle=WHITE;g.fillText(a,cx-(aw+bw)/2,y+222+(1-pc)*12);g.fillStyle=YEL;g.fillText(b,cx-(aw+bw)/2+aw,y+222+(1-pc)*12);
+  // disclaimer
+  g.globalAlpha=0.55*eOut(lin(t,t0+1.4,t0+1.9));g.fillStyle=WHITE;g.font='400 22px IR';
+  const d='Satire · Fiktive Schulpartei · Sozialkundeprojekt';g.fillText(d,cx-g.measureText(d).width/2,H-70);
+  g.restore();
+  // leading yellow edge of the sweep
+  if(p>0&&p<1){g.fillStyle=YEL;g.beginPath();g.moveTo(xr,0);g.lineTo(xr+90,0);g.lineTo(xr+90-sk,H);g.lineTo(xr-sk,H);g.closePath();g.fill()}
+}
+window.render=function(t){
+  g.globalAlpha=1;g.textBaseline='alphabetic';g.fillStyle='#000';g.fillRect(0,0,W,H);
+  if(t<T.a_end) secA(t);
+  else if(t<T.drop){/* black: silence before the punchline */}
+  else if(t<T.card_in) footage(t);
+  else if(t<T.logo_in) secD(t);
+  else secE(t);
+  const fo=lin(t,T.total-0.35,T.total);if(fo>0){g.globalAlpha=1;g.fillStyle='rgba(0,0,0,'+fo+')';g.fillRect(0,0,W,H)}
+};
+</script></body></html>
